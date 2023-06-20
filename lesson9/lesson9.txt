@@ -1,0 +1,26 @@
+Задача 40: Работать с файлом california_housing_train.csv, который находится в папке sample_data. 
+Определить среднюю стоимость дома, где кол-во людей от 0 до 500 (population).
+
+Задача 42: Узнать какая максимальная households в зоне минимального значения population.
+
+
+решение:
+
+import pandas as pd
+data = pd.read_csv('sample_data/california_housing_train.csv')
+data.head()
+
+
+population = data['population']
+current_population = data[(population < 500) & (population > 0)]
+current_data = current_population['median_house_value']
+result = current_data.mean()
+print(result)
+
+
+min_population = population.min()
+data_min_population = data[population == 3.0]
+data_min_population['households'].max()
+
+
+https://colab.research.google.com/drive/1l7ZZkEuMay0gzVsDrgfuqCVVZ39T6oVv?authuser=0#scrollTo=wgHpd2hyJcmn
