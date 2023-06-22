@@ -10,3 +10,10 @@ lst += ['human'] * 10
 random.shuffle(lst)
 data = pd.DataFrame({'whoAmI'lst})
 data.head() |
+
+
+Решение:
+
+https://colab.research.google.com/drive/1hL-aVHOnhOHJNpxZEFo8pCk3g06POPAa#scrollTo=SG9YiNIUodLI
+
+
